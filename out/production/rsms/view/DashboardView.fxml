@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.DashboardController"
+            prefWidth="800" prefHeight="500"
+            style="-fx-background-color: linear-gradient(to bottom right, #4a90e2, #357ABD);">
+
+    <center>
+        <VBox spacing="25" alignment="CENTER">
+            <padding>
+                <Insets top="40" right="40" bottom="40" left="40"/>
+            </padding>
+
+            <Label fx:id="welcomeLabel"
+                   text="Selamat datang, Admin"
+                   style="-fx-text-fill: white; -fx-font-weight: bold;">
+                <font>
+                    <Font name="Arial Bold" size="28"/>
+                </font>
+            </Label>
+
+            <Button text="Data Pasien" onAction="#handleOpenPasien"
+                    style="-fx-background-color: #f1c40f; -fx-text-fill: #2c3e50; -fx-font-weight: bold; -fx-background-radius: 5;"
+                    prefWidth="220" prefHeight="45" />
+
+            <Button text="Data Dokter" onAction="#handleOpenDokter"
+                    style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"
+                    prefWidth="220" prefHeight="45" />
+
+            <Button text="Rekam Medis" onAction="#handleOpenRekamMedis"
+                    style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"
+                    prefWidth="220" prefHeight="45" />
+
+            <Button text="Logout" onAction="#handleLogout"
+                    style="-fx-background-color: #ff4757; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"
+                    prefWidth="220" prefHeight="45" />
+
+        </VBox>
+    </center>
+</BorderPane>

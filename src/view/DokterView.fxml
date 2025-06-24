@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.DokterController"
+      spacing="15" alignment="TOP_CENTER"
+      style="-fx-background-color: linear-gradient(to bottom right, #4a90e2, #357ABD);">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20" />
+    </padding>
+
+    <!-- Judul -->
+    <StackPane>
+        <Label text="Data Dokter"
+               style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: white;" />
+    </StackPane>
+
+    <!-- Form Input -->
+    <VBox spacing="10"
+          style="-fx-background-color: rgba(255,255,255,0.15); -fx-background-radius: 10; -fx-padding: 20;">
+        <HBox spacing="15" alignment="CENTER_LEFT">
+            <Label text="Nama:" style="-fx-text-fill: white;" />
+            <TextField fx:id="txtNama" prefWidth="200" />
+            <Label text="Spesialis:" style="-fx-text-fill: white;" />
+            <TextField fx:id="txtSpesialis" prefWidth="200" />
+        </HBox>
+    </VBox>
+
+    <!-- Tombol di pane terpisah -->
+    <HBox spacing="20" alignment="CENTER_LEFT"
+          style="-fx-background-color: rgba(255,255,255,0.1); -fx-background-radius: 10; -fx-padding: 10;">
+        <Button fx:id="btnTambah" text="Tambah" onAction="#onTambahClicked"
+                style="-fx-background-color: #f1c40f; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 5;" prefWidth="100"/>
+        <Button fx:id="btnEdit" text="Edit" onAction="#onEditClicked"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" prefWidth="100"/>
+        <Button fx:id="btnHapus" text="Hapus" onAction="#onHapusClicked"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" prefWidth="100"/>
+        <Button fx:id="btnClear" text="Clear" onAction="#onClearClicked"
+                style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;" prefWidth="100"/>
+    </HBox>
+
+    <!-- Tabel -->
+    <TableView fx:id="tableDokter" prefHeight="300" prefWidth="600"
+               style="-fx-background-color: rgba(255,255,255,0.15); -fx-background-radius: 10;">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colNama" text="Nama" prefWidth="250"/>
+            <TableColumn fx:id="colSpesialis" text="Spesialis" prefWidth="300"/>
+        </columns>
+    </TableView>
+
+</VBox>

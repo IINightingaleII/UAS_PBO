@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.LoginController"
+      spacing="15" alignment="CENTER"
+      style="-fx-background-color: linear-gradient(to bottom right, #4a90e2, #357ABD);"
+      prefWidth="350" prefHeight="400">
+
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+
+    <Label text="Welcome Back!" style="-fx-text-fill: white;" >
+        <font>
+            <Font name="Arial Bold" size="28"/>
+        </font>
+    </Label>
+
+    <Label text="Please login to your account" style="-fx-text-fill: #d0d8f7;"/>
+
+    <TextField fx:id="usernameField" promptText="Username" 
+               style="-fx-background-radius: 5; -fx-padding: 8; -fx-font-size: 14;"
+               prefWidth="250"/>
+
+    <PasswordField fx:id="passwordField" promptText="Password"
+                   style="-fx-background-radius: 5; -fx-padding: 8; -fx-font-size: 14;"
+                   prefWidth="250"/>
+
+    <Button text="Login" onAction="#handleLogin"
+        style="-fx-background-color: #1b4f72; 
+               -fx-text-fill: white; 
+               -fx-font-weight: bold; 
+               -fx-background-radius: 5; 
+               -fx-border-color: transparent;
+               -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.15), 4, 0, 0, 2);"
+        prefWidth="250" prefHeight="35">
+    <font>
+        <Font size="16"/>
+    </font>
+</Button>
+
+
+    <Label fx:id="messageLabel" style="-fx-text-fill: #ff6b6b; -fx-font-weight: bold;"/>
+
+</VBox> 
