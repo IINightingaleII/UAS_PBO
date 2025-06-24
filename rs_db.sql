@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 23, 2025 at 10:19 AM
+-- Generation Time: Jun 24, 2025 at 07:26 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -64,7 +64,8 @@ INSERT INTO `pasien` (`id`, `nama`, `umur`, `alamat`, `no_hp`) VALUES
 (2, 'Riko', 12, 'Jambi', '14367'),
 (5, 'Joel', 23, 'Atb', '000'),
 (8, 'tiara', 23, 'wedi', '0823291291'),
-(9, 'Lulu', 12, 'solo', '18212819');
+(9, 'Lulu', 12, 'solo', '18212819'),
+(10, 'firman', 12, 'jln.sigma', '087786723999');
 
 -- --------------------------------------------------------
 
@@ -106,7 +107,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
-(1, 'admin', '1234');
+(1, 'admin', '81dc9bdb52d04dc20036dbd8313ed055');
 
 --
 -- Indexes for dumped tables
@@ -152,7 +153,7 @@ ALTER TABLE `dokter`
 -- AUTO_INCREMENT for table `pasien`
 --
 ALTER TABLE `pasien`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `rekam_medis`
